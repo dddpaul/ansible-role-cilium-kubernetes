@@ -6,7 +6,7 @@
     namespace: "{{ cilium_namespace }}"
   delegate_to: 127.0.0.1
   run_once: True
-  when: cilium_etcd_secrets_name is defined
+  when: cilium_etcd_secrets_name is defined and cilium_etcd_secrets_name
 
 - name: Update Helm repo
   shell: # noqa 301
