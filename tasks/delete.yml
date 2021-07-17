@@ -37,6 +37,7 @@
       - reload systemd
   when:
     - ansible_lsb.release is version('20.04', '<')
+  become: True
 
 - name: Delete namespace used by Cilium
   k8s:
