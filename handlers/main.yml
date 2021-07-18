@@ -1,3 +1,4 @@
 ---
 - name: reload systemd
+  become: True
   command: systemctl daemon-reload # noqa 303
